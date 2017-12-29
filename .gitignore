@@ -1,0 +1,4 @@
+.gitconfig
+.ssh
+nvim/undo/*
+nvim/.netrwhist

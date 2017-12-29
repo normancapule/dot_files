@@ -1,0 +1,8 @@
+.DS_Store
+.ruby-version
+.ruby-gemset
+node_modules
+tags
+.#*
+.vscode
+.elixir_ls
