@@ -2,11 +2,9 @@
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "search.useIgnoreFiles": true,
-  "editor.fontFamily": "'Fira Code'",
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
-  "editor.detectIndentation": false,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
   "explorer.confirmDragAndDrop": false,
@@ -20,7 +18,7 @@
   "sync.autoUpload": true,
   "sync.autoDownload": true,
 	"files.insertFinalNewline": true,
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "onFocusChange",
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "vim.leader": "<space>",
@@ -999,5 +997,7 @@
   "gitlens.views.repositories.files.layout": "tree",
   "typescript.tsserver.log": "verbose",
   "search.searchOnType": false,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.fontFamily": "'FiraCode Nerd Font'",
+  "editor.wordWrap": "on"
 }
