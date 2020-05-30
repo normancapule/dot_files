@@ -24,7 +24,7 @@ alias update_tools='brew update;
                     upgrade_oh_my_zsh;
                     asdf plugin-update --all;
                     asdf update;
-                    vim +PluginUpdate +qall;
+                    nvim +PluginUpdate +qall;
                     (cd $HOME/.emacs.d && git pull);
                    '
 alias update_repos='(cd $HOME/Dropbox/Work && ./update-all.sh);'
