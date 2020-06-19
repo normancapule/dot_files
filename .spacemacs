@@ -35,7 +35,7 @@
 ;; https://github.com/tonsky/FiraCode/wiki/Emacs-instructions
 (defun firacode ()
   (when (window-system)
-    (set-frame-font "Fira Code"))
+    (set-frame-font "FiraCode Nerd Font"))
   (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
                  (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
                  (36 . ".\\(?:>\\)")
