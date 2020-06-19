@@ -1,7 +1,7 @@
 ;; -*- mode: emacs-lisp -*-
 
 ;; This file is loaded by Spacemacs at startup.
-;; It must be stored in your home directory.
+;f; It must be stored in your home directory.
 
 (defun setup-indent (n)
   (setq-default javascript-indent-level n) ; javascript-mode
@@ -120,7 +120,6 @@ This function should only modify configuration layer settings."
    '(rust
      typescript
      vimscript
-     elixir
      html
      yaml
      csv

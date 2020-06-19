@@ -8,6 +8,7 @@ plugins=(
   emacs
   asdf
   zsh-z
+  docker
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -16,8 +17,18 @@ source $ZSH/oh-my-zsh.sh
 ### ALIASES ###
 alias rmt="rmtrash"
 
+### DOCKER ###
+alias dcu="docker-compose up"
+alias dcud="docker-compose up -d"
+alias dcd="docker-compose down"
+# [D]ocker [r]un as a task
+alias dr="docker-compose run --rm web"
+# [D]ocker [r]un as a [s]erver
+alias drs="docker-compose run --rm --service-ports web"
 ### COMMANDS ###
 alias py="python"
+alias ec="emacsclient -c -a ''"
+alias ect="emacsclient -c -a '' -t"
 
 ### GIT ###
 alias gaa="git add --all"
