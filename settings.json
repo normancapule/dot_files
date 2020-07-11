@@ -17,8 +17,7 @@
   "sync.gist": "26ab801bf1bf449271737eb326ae095c",
   "sync.autoUpload": true,
   "sync.autoDownload": true,
-	"files.insertFinalNewline": true,
-  "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "vim.leader": "<space>",
@@ -467,49 +466,6 @@
                   "command": "editor.action.formatDocument",
                   "args": []
               }
-          ]
-      },
-      {
-          "before": [
-              "leader",
-              "j",
-              "j"
-          ],
-          "after": [
-              "leader",
-              "leader",
-              "s"
-          ]
-      },
-      {
-          "before": [
-              "leader",
-              "j",
-              "l"
-          ],
-          "after": [
-              "leader",
-              "leader",
-              "leader",
-              "b",
-              "d",
-              "j",
-              "k"
-          ]
-      },
-      {
-          "before": [
-              "leader",
-              "j",
-              "w"
-          ],
-          "after": [
-              "leader",
-              "leader",
-              "leader",
-              "b",
-              "d",
-              "w"
           ]
       },
       {
@@ -998,6 +954,25 @@
   "typescript.tsserver.log": "verbose",
   "search.searchOnType": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.fontFamily": "FiraCode Nerd Font",
-  "editor.wordWrap": "on"
+  "editor.fontFamily": "'FiraCode Nerd Font'",
+"editor.wordWrap": "on",
+"workbench.iconTheme": "material-icon-theme",
+"[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"editor.matchBrackets": false,
+"[html]": {
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"workbench.activityBar.visible": true,
+"[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
 }
