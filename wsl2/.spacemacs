@@ -127,10 +127,8 @@ This function should only modify configuration layer settings."
      git
      version-control
      elixir
-     html
      emacs-lisp
      ruby-on-rails
-     deft
      react
      javascript
      syntax-checking
