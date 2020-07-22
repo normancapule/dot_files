@@ -6,3 +6,4 @@ tags
 .#*
 .vscode
 .elixir_ls
+.tool-versions
