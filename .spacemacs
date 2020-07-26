@@ -131,11 +131,11 @@ This function should only modify configuration layer settings."
      emacs-lisp
      ruby-on-rails
      react
-     javascript
      syntax-checking
      colors
      auto-completion
-     (javascript :variables node-add-modules-path t)
+     (javascript :variables
+                 node-add-modules-path t)
      (markdown :variables
                markdown-live-preview-engine 'vmd
                markdown-command "vmd")
