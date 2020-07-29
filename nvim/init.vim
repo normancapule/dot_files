@@ -5,7 +5,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
-"Config Section
+" Config Section
 
 " General {
   set autoindent
