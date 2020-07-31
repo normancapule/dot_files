@@ -135,7 +135,8 @@ This function should only modify configuration layer settings."
      colors
      auto-completion
      (javascript :variables
-                 node-add-modules-path t)
+                 node-add-modules-path t
+                 javascript-import-tool 'import-js)
      (markdown :variables
                markdown-live-preview-engine 'vmd
                markdown-command "vmd")
