@@ -36,8 +36,11 @@ alias vi="mvim -v"
 alias py="python"
 alias ec="open -a /usr/local/Cellar/emacs-plus/26.3/Emacs.app/"
 alias ect="emacsclient -t -c -a ''"
+alias gprune="git checkout master && git fetch && git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d && git pull"
 
 ### DOCKER ###
+alias de="docker exec -it"
+alias dc="docker-compose"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcd="docker-compose down"

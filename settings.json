@@ -729,5 +729,9 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "workbench.editor.closeEmptyGroups": false
+  "workbench.editor.closeEmptyGroups": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "todo-tree.tree.showScanModeButton": false
 }
