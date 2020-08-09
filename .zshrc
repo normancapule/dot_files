@@ -28,13 +28,12 @@ alias update_tools='brew update;
                     (cd $HOME/.emacs.d && git pull);
                    '
 alias update_repos='(cd $HOME/Dropbox/Work && ./update-all.sh);'
-alias aws="aws2"
 
 ### COMMANDS ###
 alias mps="iex -S mix phx.server"
 alias vi="mvim -v"
 alias py="python"
-alias ec="open -a /usr/local/Cellar/emacs-plus/26.3/Emacs.app/"
+alias ec="open -a /Applications/Emacs.app"
 alias ect="emacsclient -t -c -a ''"
 alias gprune="git checkout master && git fetch && git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d && git pull"
 
@@ -69,22 +68,15 @@ alias be="bundle exec"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-fi
+export EDITOR='vim'
 
 export PGPASSWORD=admin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export PATH=~/bin:$PATH
 export PATH="/usr/local/opt/openssl/bin:$PATH"
-
 export LC_ALL=en_US.UTF-8
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-. /usr/local/etc/profile.d/z.sh
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+. /usr/local/Cellar/asdf/0.7.8/asdf.sh
+. /usr/local/etc/profile.d/z.sh
