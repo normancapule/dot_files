@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/johnnormancapule/.oh-my-zsh
-ZSH_THEME="gnzh"
+ZSH_THEME="wezm"
 
 plugins=(
   git
@@ -17,7 +17,7 @@ alias rmt="rmtrash"
 alias update_tools='brew update;
                     brew unlink macvim;
                     brew unlink vim;
-                    brew upgrade;
+		    omz update;
                     brew link --overwrite vim;
                     brew link --overwrite macvim;
                     brew cleanup;
@@ -35,7 +35,6 @@ alias vi="mvim -v"
 alias py="python"
 alias ec="open -a /Applications/Emacs.app"
 alias ect="emacsclient -t -c -a ''"
-alias gprune="git checkout master && git fetch && git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d && git pull"
 
 ### DOCKER ###
 alias de="docker exec -it"
