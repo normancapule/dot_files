@@ -1,4 +1,4 @@
-call plug#begin("~/.vim/plugged")
+call plug#begin(stdpath('data') . '/plugged')
   " Plugin Section
   Plug 'scrooloose/nerdtree'
   Plug 'morhetz/gruvbox'
