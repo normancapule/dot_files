@@ -9,10 +9,8 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-
 ### ALIASES ###
-alias ngrok="~/Downloads/ngrok"
+alias ngrok="$HOME/Downloads/ngrok"
 alias rmt="rmtrash"
 alias update_tools='brew unlink macvim;
                     brew unlink vim;
@@ -74,10 +72,12 @@ export EDITOR="nvim"
 export PGPASSWORD=admin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export PATH=~/bin:$PATH
+export PATH=$HOME/bin:$PATH
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 . /usr/local/Cellar/asdf/0.7.8/asdf.sh
 . /usr/local/etc/profile.d/z.sh
+
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
