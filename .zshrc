@@ -31,7 +31,9 @@ alias update_repos='(cd $HOME/Dropbox/Work && ./update-all.sh);'
 
 ### COMMANDS ###
 alias mps="iex -S mix phx.server"
-alias vi="mvim -v"
+# alias vi="mvim -v"
+alias vi="nvim"
+alias vim="nvim"
 alias py="python"
 alias ec="open -a /Applications/Emacs.app"
 alias ect="emacsclient -t -c -a ''"
