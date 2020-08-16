@@ -14,14 +14,14 @@ source $ZSH/oh-my-zsh.sh
 ### ALIASES ###
 alias ngrok="~/Downloads/ngrok"
 alias rmt="rmtrash"
-alias update_tools='brew update;
-                    brew unlink macvim;
+alias update_tools='brew unlink macvim;
                     brew unlink vim;
-		    omz update;
+                    brew update;
+                    brew upgrade;
                     brew link --overwrite vim;
                     brew link --overwrite macvim;
                     brew cleanup;
-                    upgrade_oh_my_zsh;
+                    omz update;
                     asdf plugin-update --all;
                     asdf update;
                     nvim +PluginUpdate +qall;
@@ -69,7 +69,7 @@ alias be="bundle exec"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export EDITOR='vim'
+export EDITOR="nvim"
 
 export PGPASSWORD=admin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
