@@ -713,10 +713,10 @@
   "scss.validate": false,
   "workbench.editor.closeEmptyGroups": false,
   "todo-tree.tree.showScanModeButton": false,
-  "editor.formatOnSave": true,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.settings.editor": "json",
+  "editor.formatOnSave": true,
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
@@ -743,5 +743,8 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.formatOnSave": false
   }
 }
