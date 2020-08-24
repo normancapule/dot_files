@@ -8,6 +8,8 @@ call plug#begin(stdpath('data') . '/plugged')
   " File / pattern search
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  " Intellisense
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Config Section
@@ -62,5 +64,5 @@ call plug#end()
   if executable('rg')
     let g:rg_derive_root='true'
   endif
-  let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
+  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 " }
