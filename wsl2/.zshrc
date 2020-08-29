@@ -17,6 +17,10 @@ source $ZSH/oh-my-zsh.sh
 ### ALIASES ###
 alias rmt="rmtrash"
 
+### COMMANDS ###
+alias gprune="git checkout master && git fetch && git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d && git pull"
+
+
 ### DOCKER ###
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
@@ -60,3 +64,4 @@ export LC_ALL=en_US.UTF-8
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+export EDITORO=nvim
