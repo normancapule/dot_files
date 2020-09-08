@@ -1,7 +1,7 @@
 ;; -*- mode: emacs-lisp -*-
 
 ;; This file is loaded by Spacemacs at startup.
-;f; It must be stored in your home directory.
+;; It must be stored in your home directory.
 
 (defun setup-indent (n)
   (setq-default javascript-indent-level n) ; javascript-mode
@@ -117,24 +117,25 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(rust
+   '(docker
      typescript
      vimscript
-     html
      yaml
      csv
      helm
      git
      version-control
      elixir
+     html
      emacs-lisp
      ruby-on-rails
      react
-     javascript
      syntax-checking
      colors
      auto-completion
-     (javascript :variables node-add-modules-path t)
+     (javascript :variables
+                 node-add-modules-path t
+                 javascript-import-tool 'import-js)
      (markdown :variables
                markdown-live-preview-engine 'vmd
                markdown-command "vmd")
@@ -153,7 +154,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(rbenv rvm tern lorem-ipsum aggressive-indent google-translate uuidgen request password-generator open-junk-file fancy-battery exec-path-from-shell projectile-rails)
+   dotspacemacs-excluded-packages '(rbenv rvm tern lorem-ipsum aggressive-indent google-translate uuidgen request password-generator open-junk-file fancy-battery exec-path-from-shell projectile-rails chruby coffee-mode impatient-mode magit-svn)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -573,7 +574,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ansi package-build shut-up epl git commander f dash s writeroom-mode treemacs-evil tide robe magit-svn helm-xref gruvbox-theme evil-nerd-commenter evil-magit dumb-jump doom-modeline docker browse-at-remote ace-link counsel swiper ivy flycheck helm magit transient lv all-the-icons treemacs ace-window org-plus-contrib hydra yaml-mode ws-butler winum which-key web-mode web-beautify volatile-highlights visual-fill-column vimrc-mode vi-tilde-fringe use-package typescript-mode treemacs-projectile toc-org tagedit tablist symon string-inflection spaceline-all-the-icons solarized-theme smeargle slim-mode shrink-path seeing-is-believing scss-mode sass-mode ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocop rspec-mode rjsx-mode reveal-in-osx-finder restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters pug-mode projectile-rails prettier-js popwin pfuture persp-mode paradox overseer osx-trash osx-dictionary org-bullets ob-elixir nameless move-text mmm-mode minitest markdown-toc magit-gitflow macrostep livid-mode link-hint launchctl json-navigator json-mode js2-refactor js-doc indent-guide impatient-mode hungry-delete ht hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-ag golden-ratio gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md font-lock+ flycheck-pos-tip flycheck-mix flycheck-credo flx-ido fill-column-indicator feature-mode eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-numbers evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu emmet-mode elisp-slime-nav eldoc-eval editorconfig dotenv-mode dockerfile-mode docker-tramp diminish diff-hl deft dactyl-mode csv-mode counsel-projectile column-enforce-mode color-identifiers-mode coffee-mode clean-aindent-mode chruby centered-cursor-mode bundler autothemer auto-highlight-symbol auto-compile alchemist add-node-modules-path ace-jump-helm-line))))
+    (ansi package-build shut-up epl git commander f dash s writeroom-mode treemacs-evil tide robe magit-svn helm-xref gruvbox-theme evil-nerd-commenter evil-magit dumb-jump doom-modeline browse-at-remote ace-link counsel swiper ivy flycheck helm magit transient lv all-the-icons treemacs ace-window org-plus-contrib hydra yaml-mode ws-butler winum which-key web-mode web-beautify volatile-highlights visual-fill-column vimrc-mode vi-tilde-fringe use-package typescript-mode treemacs-projectile toc-org tagedit tablist symon string-inflection spaceline-all-the-icons solarized-theme smeargle slim-mode shrink-path seeing-is-believing scss-mode sass-mode ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocop rspec-mode rjsx-mode restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters pug-mode prettier-js popwin pfuture persp-mode paradox overseer org-bullets ob-elixir nameless move-text mmm-mode minitest markdown-toc magit-gitflow macrostep livid-mode link-hint launchctl json-navigator json-mode js2-refactor js-doc indent-guide hungry-delete ht hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-ag golden-ratio gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md font-lock+ flycheck-pos-tip flycheck-mix flycheck-credo flx-ido fill-column-indicator feature-mode eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-numbers evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu emmet-mode elisp-slime-nav eldoc-eval editorconfig dotenv-mode diminish diff-hl deft dactyl-mode csv-mode counsel-projectile column-enforce-mode color-identifiers-mode clean-aindent-mode centered-cursor-mode bundler autothemer auto-highlight-symbol auto-compile alchemist add-node-modules-path ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
