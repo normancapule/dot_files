@@ -12,12 +12,10 @@ source $ZSH/oh-my-zsh.sh
 ### ALIASES ###
 alias ngrok="$HOME/Downloads/ngrok"
 alias rmt="rmtrash"
-alias update_tools='brew unlink macvim;
-                    brew unlink vim;
+alias update_tools='brew unlink vim;
                     brew update;
                     brew upgrade;
                     brew link --overwrite vim;
-                    brew link --overwrite macvim;
                     brew cleanup;
                     omz update;
                     asdf plugin-update --all;
@@ -29,7 +27,6 @@ alias update_repos='(cd $HOME/Dropbox/Work && ./update-all.sh);'
 
 ### COMMANDS ###
 alias mps="iex -S mix phx.server"
-# alias vi="mvim -v"
 alias vi="'vim'"
 alias vim="nvim"
 alias py="python"
@@ -77,7 +74,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-. /usr/local/Cellar/asdf/0.7.8/asdf.sh
+. /usr/local/Cellar/asdf/0.8.0/asdf.sh
 . /usr/local/etc/profile.d/z.sh
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
