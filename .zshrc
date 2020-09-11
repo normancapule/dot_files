@@ -62,7 +62,7 @@ alias gblatest="git for-each-ref --sort=committerdate refs/remotes/ --format='%(
 alias be="bundle exec"
 
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.asdf/shims:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export EDITOR="nvim"
 
@@ -75,6 +75,7 @@ export LC_ALL=en_US.UTF-8
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 . /usr/local/Cellar/asdf/0.8.0/asdf.sh
+. /usr/local/Cellar/asdf/0.8.0/etc/bash_completion.d/asdf.bash
 . /usr/local/etc/profile.d/z.sh
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
