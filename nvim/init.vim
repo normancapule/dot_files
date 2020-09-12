@@ -10,6 +10,8 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'junegunn/fzf.vim'
   " Intellisense
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Magit for vim
+  Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Config Section
@@ -61,8 +63,6 @@ call plug#end()
 
 " FZF {
   nmap <C-p> :Files<CR>
-  if executable('rg')
-    let g:rg_derive_root='true'
-  endif
+  let g:rg_derive_root='true'
   let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 " }

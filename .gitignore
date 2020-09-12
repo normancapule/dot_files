@@ -3,3 +3,5 @@
 .zsh_history
 nvim/undo/*
 nvim/.netrwhist
+.aws
+ecs-cli.asc
