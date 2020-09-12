@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/johnnormancapule/.oh-my-zsh
-ZSH_THEME="gnzh"
+ZSH_THEME="wezm"
 
 plugins=(
   git
@@ -16,21 +16,35 @@ source $ZSH/oh-my-zsh.sh
 
 ### ALIASES ###
 alias rmt="rmtrash"
-
-### COMMANDS ###
-alias gprune="git checkout master && git fetch && git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d && git pull"
-
+alias vi="'vim'"
+alias vim="nvim"
+alias ngrok="~/ngrok"
+alias gt="git-town"
+alias update_tools="
+  sudo apt-get update;
+  sudo apt-get upgrade;
+  sudo apt autoremove;
+  brew update;
+  brew upgrade;
+  brew cleanup;
+  omz update;
+  asdf plugin-update --all;
+  asdf update;
+  vim +PlugUpdate +qall;
+  (cd $HOME/.emacs.d && git pull);
+"
 
 ### DOCKER ###
+alias dc="docker-compose"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
-alias dcd="docker-compose down"
+alias dcd="docker-compose down -t 0"
+alias dce="docker exec -it"
 # [D]ocker [r]un as a task
-alias dr="docker-compose run --rm web"
+alias dr="docker-compose run --rm"
 # [D]ocker [r]un as a [s]erver
-alias drs="docker-compose run --rm --service-ports web"
+alias drs="docker-compose run --rm --service-ports"
 ### COMMANDS ###
-alias py="python"
 alias ec="emacsclient -c -a ''"
 alias ect="emacsclient -c -a '' -t"
 
@@ -51,9 +65,8 @@ alias gblatest="git for-each-ref --sort=committerdate refs/remotes/ --format='%(
 ### RUBY ###
 alias be="bundle exec"
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-fi
+export EDITOR='vim'
+export BROWSER=wslview
 
 export PGPASSWORD=admin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
@@ -64,4 +77,5 @@ export LC_ALL=en_US.UTF-8
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
-export EDITORO=nvim
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
