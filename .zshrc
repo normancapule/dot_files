@@ -10,6 +10,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 ### ALIASES ###
+alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 alias ngrok="$HOME/Downloads/ngrok"
 alias rmt="rmtrash"
 alias update_tools='brew unlink vim;
@@ -36,11 +37,10 @@ alias ect="emacsclient -t -c -a ''"
 ### DOCKER ###
 alias de="docker exec -it"
 alias dc="docker-compose"
+alias dcr="docker-compose run --rm"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcd="docker-compose down"
-# [D]ocker [r]un as a task
-alias dr="docker-compose run --rm web"
 # [D]ocker [r]un as a [s]erver
 alias drs="docker-compose run --rm --service-ports web"
 
