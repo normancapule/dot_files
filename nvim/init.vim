@@ -10,13 +10,13 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'junegunn/fzf.vim'
   " Intellisense
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  " Magit for vim
+  " Magit
   Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Config Section
 
-" General {
+" General
   set autoindent
   set smartindent
   set expandtab
@@ -31,15 +31,13 @@ call plug#end()
   " Unlimited persistent undo:
   set undofile
   set undodir=~/.config/nvim/undo
-" }
 
-" Themes {
+" Themes
   colorscheme gruvbox
   set background=dark
   " set background=light
-" }
 
-" Mapping {
+" Mapping
   let mapleader = " "
   nnoremap <C-t> :tabnew<CR>
   " disable arrow keys
@@ -47,7 +45,6 @@ call plug#end()
   noremap <up> <nop>
   noremap <down> <nop>
   noremap <right> <nop>
-  map <leader>n :execute 'NERDTreeToggle '<CR>
   nnoremap \ :Rg<CR>
   " Reselect visual block after indent/outdent
   vnoremap < <gv
@@ -59,10 +56,19 @@ call plug#end()
   nmap <C-h> <C-W><C-H>
   set splitbelow
   set splitright
-" }
+  map <leader>n :execute 'NERDTreeToggle '<CR>
+  map <leader>sc :noh<CR>
 
-" FZF {
+" FZF
   nmap <C-p> :Files<CR>
-  let g:rg_derive_root='true'
+  if executable('rg')
+    let g:rg_derive_root='true'
+  endif
   let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
-" }
+
+" Fugutive
+nmap <leader>gs :Git<CR>
+nmap <leader>gp :Gpush<CR>
+nmap <leader>gcb :Git checkout -b
+nmap <leader>gco :Git checkout
+nmap <leader>gpd :Git pull origin develop --rebase<CR>
