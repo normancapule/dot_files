@@ -13,10 +13,7 @@
   "typescript.validate.enable": true,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreview": false,
-  "sync.quietSync": true,
   "sync.gist": "26ab801bf1bf449271737eb326ae095c",
-  "sync.autoUpload": true,
-  "sync.autoDownload": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
@@ -683,6 +680,15 @@
           "args": []
         }
       ]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleSidebarVisibility"
+        }
+      ]
     }
   ],
   "vim.insertModeKeyBindings": [
@@ -702,7 +708,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.fontFamily": "'FiraCode Nerd Font'",
   "editor.wordWrap": "on",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   "editor.matchBrackets": false,
   "workbench.activityBar.visible": true,
   "advancedNewFile.exclude": {
@@ -746,5 +752,9 @@
   },
   "[ruby]": {
     "editor.formatOnSave": false
-  }
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "sync.forceDownload": true
 }

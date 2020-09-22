@@ -25,6 +25,7 @@ call plug#end()
   set nopaste
   set clipboard=unnamed
   set ttyfast
+  set number
   " Enable syntax highlighting
   filetype plugin indent on
   syntax on
