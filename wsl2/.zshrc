@@ -36,6 +36,7 @@ alias update_tools="
 
 ### DOCKER ###
 alias dc="docker-compose"
+alias dcr="docker-compose run --rm"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcd="docker-compose down -t 0"
@@ -66,6 +67,7 @@ alias gblatest="git for-each-ref --sort=committerdate refs/remotes/ --format='%(
 alias be="bundle exec"
 
 export EDITOR='vim'
+# open browser from wsl to windows
 export BROWSER=wslview
 
 export PGPASSWORD=admin
