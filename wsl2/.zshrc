@@ -37,6 +37,7 @@ alias update_tools="
 ### DOCKER ###
 alias dc="docker-compose"
 alias dcr="docker-compose run --rm"
+alias dcre="docker-compose run --rm --entrypoint"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcd="docker-compose down -t 0"
