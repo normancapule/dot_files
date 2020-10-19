@@ -8,6 +8,8 @@ plugins=(
   emacs
 )
 source $ZSH/oh-my-zsh.sh
+HISTFILE="${HOME}/.zsh_history"
+setopt SHARE_HISTORY
 
 ### ALIASES ###
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
@@ -66,11 +68,6 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH="$HOME/.asdf/shims:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export EDITOR="nvim"
-
-export HISTFILE=~/.zsh_history
-export HISTSIZE=10000
-export SAVEHIST=1000
-setopt SHARE_HISTORY
 
 export PGPASSWORD=admin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
