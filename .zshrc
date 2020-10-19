@@ -38,6 +38,7 @@ alias ect="emacsclient -t -c -a ''"
 alias de="docker exec -it"
 alias dc="docker-compose"
 alias dcr="docker-compose run --rm"
+alias dcre="docker-compose run --rm --entrypoint"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcd="docker-compose down"
@@ -65,6 +66,11 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH="$HOME/.asdf/shims:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export EDITOR="nvim"
+
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=1000
+setopt SHARE_HISTORY
 
 export PGPASSWORD=admin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
