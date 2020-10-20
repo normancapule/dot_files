@@ -68,8 +68,10 @@ alias gblatest="git for-each-ref --sort=committerdate refs/remotes/ --format='%(
 alias be="bundle exec"
 
 export EDITOR='vim'
-# open browser from wsl to windows
-export BROWSER=wslview
+# open chrome from wsl to windows
+export BROWSER='/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'
+# use Xserver
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 export PGPASSWORD=admin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
@@ -79,6 +81,8 @@ export KERL_CONFIGURE_OPTIONS='--disable-debug --without-javac'
 export LC_ALL=en_US.UTF-8
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /home/linuxbrew/.linuxbrew/Cellar/terraform/0.13.4/bin/terraform terraform
