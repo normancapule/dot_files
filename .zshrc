@@ -8,6 +8,8 @@ plugins=(
   emacs
 )
 source $ZSH/oh-my-zsh.sh
+HISTFILE="${HOME}/.zsh_history"
+setopt SHARE_HISTORY
 
 ### ALIASES ###
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
@@ -38,6 +40,7 @@ alias ect="emacsclient -t -c -a ''"
 alias de="docker exec -it"
 alias dc="docker-compose"
 alias dcr="docker-compose run --rm"
+alias dcre="docker-compose run --rm --entrypoint"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcd="docker-compose down"
