@@ -11,6 +11,8 @@ plugins=(
   docker
 )
 source $ZSH/oh-my-zsh.sh
+HISTFILE="${HOME}/.zsh_history"
+setopt SHARE_HISTORY
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
@@ -69,7 +71,7 @@ alias be="bundle exec"
 
 export EDITOR='vim'
 # open chrome from wsl to windows
-export BROWSER='/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'
+# export BROWSER='/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'
 # use Xserver
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
