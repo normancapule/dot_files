@@ -35,6 +35,11 @@ alias vim="nvim"
 alias py="python"
 alias ec="open -a /Applications/Emacs.app"
 alias ect="emacsclient -t -c -a ''"
+alias reset_ssh='eval `ssh-agent -s`:
+                 ssh-add -D;
+                 ssh-agent;
+                 ssh-add
+                '
 
 ### DOCKER ###
 alias de="docker exec -it"
