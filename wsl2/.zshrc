@@ -29,11 +29,11 @@ alias update_tools="
   brew update;
   brew upgrade;
   brew cleanup;
-  omz update;
   asdf plugin-update --all;
   asdf update;
   vim +PlugUpdate +qall;
   (cd $HOME/.emacs.d && git pull);
+  omz update;
 "
 
 ### DOCKER ###
@@ -88,3 +88,7 @@ eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /home/linuxbrew/.linuxbrew/Cellar/terraform/0.13.4/bin/terraform terraform
+
+# WSL2 ssh weirdness
+eval `ssh-agent -s`
+ssh-add
