@@ -8,3 +8,4 @@ tags
 .elixir_ls
 .tool-versions
 *.swp
+.eslintcache
