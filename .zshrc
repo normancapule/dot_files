@@ -20,11 +20,11 @@ alias update_tools='brew unlink vim;
                     brew upgrade;
                     brew link --overwrite vim;
                     brew cleanup;
-                    omz update;
                     asdf plugin-update --all;
                     asdf update;
                     nvim +PluginUpdate +qall;
                     (cd $HOME/.emacs.d && git pull);
+                    omz update;
                    '
 alias update_repos='(cd $HOME/Dropbox/Work && ./update-all.sh);'
 
