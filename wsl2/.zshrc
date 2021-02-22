@@ -23,8 +23,8 @@ alias vim="nvim"
 alias ngrok="~/ngrok"
 alias gt="git-town"
 alias update_tools="
-  sudo apt-get update;
-  sudo apt-get upgrade;
+  sudo apt-get update -y;
+  sudo apt-get upgrade -y;
   sudo apt autoremove;
   brew update;
   brew upgrade;
@@ -92,3 +92,18 @@ complete -o nospace -C /home/linuxbrew/.linuxbrew/Cellar/terraform/0.13.4/bin/te
 # WSL2 ssh weirdness
 eval `ssh-agent -s`
 ssh-add
+
+cd() {
+  builtin cd $argv
+  pwd > ~/.last_dir
+}
+
+unalias z
+z() {
+  zshz 2>&1 $argv
+  pwd > ~/.last_dir
+}
+
+if [ -f ~/.last_dir ]; then
+  cd `cat ~/.last_dir`
+fi
