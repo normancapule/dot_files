@@ -9,3 +9,4 @@ tags
 .tool-versions
 *.swp
 .eslintcache
+.expo

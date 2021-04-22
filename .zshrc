@@ -82,8 +82,10 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-. /usr/local/Cellar/asdf/0.8.0/asdf.sh
-. /usr/local/Cellar/asdf/0.8.0/etc/bash_completion.d/asdf.bash
+. /usr/local/Cellar/asdf/0.8.0_1/asdf.sh
+. /usr/local/Cellar/asdf/0.8.0_1/etc/bash_completion.d/asdf.bash
 . /usr/local/etc/profile.d/z.sh
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
