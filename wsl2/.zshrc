@@ -9,6 +9,7 @@ plugins=(
   asdf
   zsh-z
   docker
+  docker-compose
 )
 source $ZSH/oh-my-zsh.sh
 HISTFILE="${HOME}/.zsh_history"
@@ -34,20 +35,19 @@ alias update_tools="
   vim +PlugUpdate +qall;
   (cd $HOME/.emacs.d && git pull);
   omz update;
+  sudo apt-get clean;
 "
 
 ### DOCKER ###
 alias dc="docker-compose"
 alias dcr="docker-compose run --rm"
+alias dcrs="docker-compose run --rm --service-ports"
 alias dcre="docker-compose run --rm --entrypoint"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcd="docker-compose down -t 0"
 alias dce="docker exec -it"
-# [D]ocker [r]un as a task
-alias dr="docker-compose run --rm"
-# [D]ocker [r]un as a [s]erver
-alias drs="docker-compose run --rm --service-ports"
+
 ### COMMANDS ###
 alias ec="emacsclient -c -a ''"
 alias ect="emacsclient -c -a '' -t"
@@ -65,6 +65,7 @@ alias gc="git commit"
 alias gt="git town"
 alias glgraph="git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\' --abbrev-commit"
 alias gblatest="git for-each-ref --sort=committerdate refs/remotes/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+alias gsetb="git push --set-upstream origin \$(git rev-parse --abbrev-ref HEAD)"
 
 ### RUBY ###
 alias be="bundle exec"
@@ -86,24 +87,47 @@ export LC_ALL=en_US.UTF-8
 
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /home/linuxbrew/.linuxbrew/Cellar/terraform/0.13.4/bin/terraform terraform
-
 # WSL2 ssh weirdness
 eval `ssh-agent -s`
 ssh-add
 
 cd() {
   builtin cd $argv
-  pwd > ~/.last_dir
+  pwd > ~/.cache/.last_dir
 }
 
 unalias z
 z() {
   zshz 2>&1 $argv
-  pwd > ~/.last_dir
+  pwd > ~/.cache/.last_dir
 }
 
-if [ -f ~/.last_dir ]; then
-  cd `cat ~/.last_dir`
+if [ -f ~/.cache/.last_dir ]; then
+  cd `cat ~/.cache/.last_dir`
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
