@@ -68,12 +68,6 @@
   (setq flycheck-elixir-credo-strict t)
   (setq flycheck-disabled-checkers '(javascript-jshint))
   (setq js2-strict-missing-semi-warning nil)
-  ;; https://github.com/prettier/prettier-emacs
-  (require 'prettier-js)
-  (setq prettier-js-command "prettier-eslint")
-  ;; (add-hook 'js-mode-hook 'prettier-js-mode)
-  ;; (add-hook 'js2-mode-hook 'prettier-js-mode)
-  ;; (add-hook 'react-mode-hook 'prettier-js-mode)
   (setq js2-mode-show-parse-errors nil)
   (setq js2-mode-show-strict-warnings nil)
   )
@@ -109,8 +103,8 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(docker
-     typescript
+   '(sql
+     docker
      vimscript
      yaml
      csv
@@ -126,9 +120,15 @@ This function should only modify configuration layer settings."
      syntax-checking
      colors
      auto-completion
+     terraform
+     sql
+     prettier
+     (typescript :variables
+                 typescript-fmt-tool 'prettier)
      (javascript :variables
                  node-add-modules-path t
-                 javascript-import-tool 'import-js)
+                 javascript-import-tool 'import-js
+                 javascript-fmt-tool 'prettier)
      (markdown :variables
                markdown-live-preview-engine 'vmd
                markdown-command "vmd")
@@ -141,7 +141,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(prettier-js)
+   dotspacemacs-additional-packages '()
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
