@@ -49,7 +49,7 @@ alias dcd="docker-compose down -t 0"
 alias dce="docker exec -it"
 
 ### COMMANDS ###
-alias ec="emacsclient -c -a ''"
+alias ec="emacs27 -c -a ''"
 alias ect="emacsclient -c -a '' -t"
 
 ### GIT ###
