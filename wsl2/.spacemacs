@@ -269,11 +269,11 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("FiraCode Nerd Font"
-                               :size 13
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1.3)
+   dotspacemacs-default-font '("Mono"
+                                :size 14
+                                :weight normal
+                                :width normal
+                                :powerline-scale 1.1)
 
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
@@ -530,7 +530,6 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (global-company-mode t)
   (setup-indent 2)
-  (firacode)
   (linters)
   (spacemacs/enable-transparency)
   (setq create-lockfiles nil)
