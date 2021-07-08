@@ -145,7 +145,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(git-link)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -270,7 +270,7 @@ It should only modify the values of Spacemacs settings."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Mono"
-                                :size 14
+                                :size 16
                                 :weight normal
                                 :width normal
                                 :powerline-scale 1.1)
@@ -554,6 +554,7 @@ before packages are loaded."
   (define-key evil-normal-state-map (kbd "SPC <<") 'org-do-promote)
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
   (add-to-list 'default-frame-alist '(ns-appearance . dark))
+  (unbind-key (kbd "C-v") evil-normal-state-map)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

@@ -45,11 +45,11 @@ alias dcrs="docker-compose run --rm --service-ports"
 alias dcre="docker-compose run --rm --entrypoint"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
-alias dcd="docker-compose down -t 0"
+alias dcd="docker-compose down -t 0 --remove-orphans"
 alias dce="docker exec -it"
 
 ### COMMANDS ###
-alias ec="emacs27 -c -a '' &"
+alias ec="emacs27"
 alias ect="emacsclient -c -a '' -t"
 
 ### GIT ###
