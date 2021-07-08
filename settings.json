@@ -11,9 +11,8 @@
   "explorer.confirmDelete": false,
   "javascript.validate.enable": false,
   "typescript.validate.enable": true,
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Fortnite",
   "workbench.editor.enablePreview": false,
-  "sync.gist": "26ab801bf1bf449271737eb326ae095c",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
@@ -22,11 +21,11 @@
   "vim.useSystemClipboard": true,
   "vim.normalModeKeyBindings": [
     {
-      "before": ["<leader>", "<space>"],
+      "before": ["<leader>", "<leader>"],
       "after": [],
       "commands": [
         {
-          "command": "workbench.action.showCommands",
+          "command": "vspacecode.space",
           "args": []
         }
       ]
@@ -286,7 +285,7 @@
       "after": [],
       "commands": [
         {
-          "command": "workbench.view.scm",
+          "command": "magit.status",
           "args": []
         }
       ]
@@ -691,25 +690,20 @@
       ]
     }
   ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["f", "d"],
-      "after": ["<Esc>"]
-    }
-  ],
+  "vim.handleKeys": {
+      "<C-d>": false
+  },
   "vim.easymotion": true,
-  "window.zoomLevel": 1,
   "remote.extensionKind": {
     "ms-azuretools.vscode-docker": "workspace"
   },
-  "gitlens.views.repositories.files.layout": "tree",
-  "typescript.tsserver.log": "verbose",
+  "typescript.tsserver.log": "off",
   "search.searchOnType": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.fontFamily": "'FiraCode Nerd Font'",
-  "editor.wordWrap": "on",
+  "editor.wordWrap": "off",
   "workbench.iconTheme": "vscode-icons",
-  "editor.matchBrackets": false,
+  "editor.matchBrackets": "always",
   "workbench.activityBar.visible": true,
   "advancedNewFile.exclude": {
     "node_modules": true
@@ -717,12 +711,15 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "workbench.editor.closeEmptyGroups": false,
+  // "workbench.editor.closeEmptyGroups": false,
   "todo-tree.tree.showScanModeButton": false,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.settings.editor": "json",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
@@ -750,11 +747,40 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[ruby]": {
-    "editor.formatOnSave": false
-  },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
-  "sync.forceDownload": true
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true
+    }
+  },
+  "ruby.format": "rubocop",
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[ruby]": {
+    "editor.defaultFormatter": "rebornix.ruby"
+  },
+  "vim.foldfix": true,
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "vsicons.dontShowNewVersionMessage": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 1,
+  "editor.cursorStyle": "line",
+  "editor.lineNumbers": "on",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-"
 }
+
