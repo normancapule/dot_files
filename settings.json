@@ -1,6 +1,4 @@
 {
-  "telemetry.enableTelemetry": false,
-  "telemetry.enableCrashReporter": false,
   "search.useIgnoreFiles": true,
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
@@ -11,7 +9,6 @@
   "explorer.confirmDelete": false,
   "javascript.validate.enable": false,
   "typescript.validate.enable": true,
-  "workbench.colorTheme": "Fortnite",
   "workbench.editor.enablePreview": false,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -691,7 +688,7 @@
     }
   ],
   "vim.handleKeys": {
-      "<C-d>": false
+    "<C-d>": false
   },
   "vim.easymotion": true,
   "remote.extensionKind": {
@@ -711,17 +708,15 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  // "workbench.editor.closeEmptyGroups": false,
-  "todo-tree.tree.showScanModeButton": false,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.settings.editor": "json",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -750,18 +745,18 @@
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
+  "[ruby]": {
+    "editor.defaultFormatter": "rebornix.ruby",
+    "editor.formatOnSave": false
+  },
   "ruby.lint": {
     "rubocop": {
       "useBundler": true
     }
   },
   "ruby.format": "rubocop",
-  "ruby.useBundler": true,
   "ruby.useLanguageServer": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "[ruby]": {
-    "editor.defaultFormatter": "rebornix.ruby"
-  },
   "vim.foldfix": true,
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
@@ -777,10 +772,26 @@
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "vsicons.dontShowNewVersionMessage": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "window.zoomLevel": 1,
   "editor.cursorStyle": "line",
   "editor.lineNumbers": "on",
-  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-"
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "workbench.startupEditor": "none",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook",
+    "git-rebase-todo": "gitlens.rebase"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "window.zoomLevel": 1,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false
+  },
+  "redhat.telemetry.enabled": true
 }
-
