@@ -2,3 +2,4 @@ ruby 3.0.0
 elixir 1.11.1
 erlang 23.1.1
 python 3.9.0
+golang 1.17.2
