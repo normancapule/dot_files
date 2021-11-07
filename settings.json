@@ -716,7 +716,7 @@
     "source.fixAll.eslint": true
   },
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -755,6 +755,7 @@
     }
   },
   "ruby.format": "rubocop",
+  "ruby.useBundler": true,
   "ruby.useLanguageServer": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "vim.foldfix": true,
@@ -793,5 +794,13 @@
     "plaintext": true,
     "markdown": false
   },
-  "redhat.telemetry.enabled": true
+  "redhat.telemetry.enabled": true,
+  "whichkey.bindingOverrides": [
+    {
+      "keys": "g.s",
+      "name": "Magit",
+      "type": "command",
+      "command": "magit.status"
+    }
+  ]
 }
