@@ -4,7 +4,7 @@ ZSH_THEME="wezm"
 
 plugins=(
   git
-  osx
+  macos
   emacs
 )
 source $ZSH/oh-my-zsh.sh
@@ -65,6 +65,7 @@ alias gc="git commit"
 alias gt="git town"
 alias glgraph="git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\' --abbrev-commit"
 alias gblatest="git for-each-ref --sort=committerdate refs/remotes/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+alias gsetb="git push --set-upstream origin \$(git rev-parse --abbrev-ref HEAD)"
 
 ### RUBY ###
 alias be="bundle exec"
@@ -82,8 +83,8 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-. /usr/local/Cellar/asdf/0.8.1/asdf.sh
-. /usr/local/Cellar/asdf/0.8.1/etc/bash_completion.d/asdf.bash
+. /usr/local/Cellar/asdf/0.8.1_1/asdf.sh
+. /usr/local/Cellar/asdf/0.8.1_1/etc/bash_completion.d/asdf.bash
 . /usr/local/etc/profile.d/z.sh
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
