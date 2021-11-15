@@ -88,5 +88,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 . /usr/local/etc/profile.d/z.sh
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+source $HOME/.zsh_scripts/fnm
