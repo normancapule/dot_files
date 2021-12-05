@@ -722,7 +722,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -757,6 +757,8 @@
   "ruby.format": "rubocop",
   "ruby.useBundler": true,
   "ruby.useLanguageServer": true,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "vim.foldfix": true,
   "gitlens.advanced.messages": {
@@ -789,7 +791,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
+    "yaml": true,
     "plaintext": true,
     "markdown": false
   },
@@ -802,5 +804,6 @@
       "command": "magit.status"
     }
   ],
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "git.ignoreMissingGitWarning": true
 }

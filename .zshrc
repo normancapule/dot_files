@@ -22,7 +22,7 @@ alias update_tools='brew unlink vim;
                     brew cleanup;
                     asdf plugin-update --all;
                     asdf update;
-                    nvim +PluginUpdate +qall;
+                    nvim +PlugUpdate +qall;
                     (cd $HOME/.emacs.d && git pull);
                     omz update;
                    '
@@ -45,6 +45,7 @@ alias reset_ssh='eval `ssh-agent -s`:
 alias de="docker exec -it"
 alias dc="docker-compose"
 alias dcr="docker-compose run --rm"
+alias dce="docker-compose run --rm"
 alias dcre="docker-compose run --rm --entrypoint"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
@@ -83,8 +84,8 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-. /usr/local/Cellar/asdf/0.8.1_1/asdf.sh
-. /usr/local/Cellar/asdf/0.8.1_1/etc/bash_completion.d/asdf.bash
+. /usr/local/Cellar/asdf/0.9.0/asdf.sh
+. /usr/local/Cellar/asdf/0.9.0/etc/bash_completion.d/asdf.bash
 . /usr/local/etc/profile.d/z.sh
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
