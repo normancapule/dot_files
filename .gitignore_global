@@ -11,3 +11,4 @@ tags
 .eslintcache
 .expo
 .nvmrc
+.node-version

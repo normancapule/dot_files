@@ -746,7 +746,7 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[ruby]": {
-    "editor.defaultFormatter": "rebornix.ruby",
+    "editor.defaultFormatter": "misogi.ruby-rubocop",
     "editor.formatOnSave": false
   },
   "ruby.lint": {
@@ -804,6 +804,6 @@
       "command": "magit.status"
     }
   ],
-  "window.zoomLevel": 1,
-  "git.ignoreMissingGitWarning": true
+  "git.ignoreMissingGitWarning": true,
+  "window.zoomLevel": 1
 }
