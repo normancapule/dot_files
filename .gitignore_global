@@ -10,3 +10,5 @@ tags
 *.swp
 .eslintcache
 .expo
+.nvmrc
+.node-version

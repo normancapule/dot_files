@@ -716,13 +716,13 @@
     "source.fixAll.eslint": true
   },
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -746,7 +746,7 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[ruby]": {
-    "editor.defaultFormatter": "rebornix.ruby",
+    "editor.defaultFormatter": "misogi.ruby-rubocop",
     "editor.formatOnSave": false
   },
   "ruby.lint": {
@@ -755,7 +755,10 @@
     }
   },
   "ruby.format": "rubocop",
+  "ruby.useBundler": true,
   "ruby.useLanguageServer": true,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "vim.foldfix": true,
   "gitlens.advanced.messages": {
@@ -786,12 +789,21 @@
   },
   "editor.inlineSuggest.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
-  "window.zoomLevel": 1,
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
+    "yaml": true,
     "plaintext": true,
     "markdown": false
   },
-  "redhat.telemetry.enabled": true
+  "redhat.telemetry.enabled": true,
+  "whichkey.bindingOverrides": [
+    {
+      "keys": "g.s",
+      "name": "Magit",
+      "type": "command",
+      "command": "magit.status"
+    }
+  ],
+  "git.ignoreMissingGitWarning": true,
+  "window.zoomLevel": 1
 }

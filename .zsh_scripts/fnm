@@ -1,0 +1,19 @@
+eval "$(fnm env)"
+export PATH="/var/folders/g0/np63whxd56sgz_p8x58m3z480000gn/T/fnm_multishells/68780_1636358203515/bin":$PATH
+export FNM_MULTISHELL_PATH="/var/folders/g0/np63whxd56sgz_p8x58m3z480000gn/T/fnm_multishells/68780_1636358203515"
+export FNM_DIR="/Users/johnnormancapule/.fnm"
+export FNM_LOGLEVEL="info"
+export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
+export FNM_ARCH="x64"
+autoload -U add-zsh-hook
+_fnm_autoload_hook () {
+    if [[ -f .node-version || -f .nvmrc ]]; then
+        fnm use
+    else
+        fnm use default
+    fi
+}
+
+add-zsh-hook chpwd _fnm_autoload_hook \
+    && _fnm_autoload_hook
+
