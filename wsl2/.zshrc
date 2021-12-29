@@ -27,7 +27,7 @@ alias update_tools="
   sudo apt-get update -y;
   sudo apt-get upgrade -y;
   sudo apt autoremove;
-  brew tap --repair
+  brew tap --repair;
   brew update;
   brew upgrade;
   brew cleanup;
