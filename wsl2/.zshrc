@@ -50,6 +50,9 @@ alias dcd="docker-compose down -t 0 --remove-orphans"
 alias dce="docker-compose exec"
 alias de="docker exec -it"
 
+### TOOLS ###
+alias k="kubectl"
+
 ### COMMANDS ###
 alias ec="emacs27"
 alias ect="emacsclient -c -a '' -t"
@@ -112,3 +115,4 @@ fi
 export PATH=/home/johnnormancapule/.fnm:$PATH
 source ~/nvm_scripts/fnm
 
+export OVERCOMMIT_DISABLE=1
