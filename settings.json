@@ -836,9 +836,10 @@
       ]
     }
   ],
-  "window.zoomLevel": 1,
   "extensions.autoUpdate": false,
   "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "window.zoomLevel": 1,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
