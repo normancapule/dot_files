@@ -56,6 +56,7 @@ alias k="kubectl"
 ### COMMANDS ###
 alias ec="emacs27"
 alias ect="emacsclient -c -a '' -t"
+alias purgecache="sync; echo 3 > sudo /proc/sys/vm/drop_caches"
 
 ### GIT ###
 alias gaa="git add --all"
