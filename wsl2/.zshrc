@@ -50,6 +50,9 @@ alias dcd="docker-compose down -t 0 --remove-orphans"
 alias dce="docker-compose exec"
 alias de="docker exec -it"
 
+### TOOLS ###
+alias k="kubectl"
+
 ### COMMANDS ###
 alias ec="emacs27"
 alias ect="emacsclient -c -a '' -t"
@@ -93,22 +96,11 @@ eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 eval `ssh-agent -s`
 ssh-add
 
-cd() {
-  builtin cd $argv
-  pwd > ~/.cache/.last_dir
-}
-
-unalias z
-z() {
-  zshz 2>&1 $argv
-  pwd > ~/.cache/.last_dir
-}
-
-if [ -f ~/.cache/.last_dir ]; then
-  cd `cat ~/.cache/.last_dir`
-fi
-
 # fnm
 export PATH=/home/johnnormancapule/.fnm:$PATH
 source ~/nvm_scripts/fnm
 
+export OVERCOMMIT_DISABLE=1
+
+PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
+precmd() { eval "$PROMPT_COMMAND" }
