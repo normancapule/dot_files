@@ -745,8 +745,8 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[ruby]": {
-    "editor.defaultFormatter": "misogi.ruby-rubocop",
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "rebornix.ruby"
   },
   "ruby.lint": {
     "rubocop": {
