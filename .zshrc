@@ -40,6 +40,7 @@ alias reset_ssh='eval `ssh-agent -s`:
                  ssh-agent;
                  ssh-add
                 '
+alias k="kubectl"
 
 ### DOCKER ###
 alias de="docker exec -it"
@@ -84,8 +85,8 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-. /usr/local/Cellar/asdf/0.10.1/asdf.sh
-. /usr/local/Cellar/asdf/0.10.1/etc/bash_completion.d/asdf.bash
+. /usr/local/Cellar/asdf/0.10.2/asdf.sh
+. /usr/local/Cellar/asdf/0.10.2/etc/bash_completion.d/asdf.bash
 . /usr/local/etc/profile.d/z.sh
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
