@@ -10,6 +10,7 @@ plugins=(
   zsh-z
   docker
   docker-compose
+  1password
 )
 source $ZSH/oh-my-zsh.sh
 HISTFILE="${HOME}/.zsh_history"
@@ -40,14 +41,14 @@ alias update_tools="
 "
 
 ### DOCKER ###
-alias dc="docker-compose"
-alias dcr="docker-compose run --rm"
-alias dcrs="docker-compose run --rm --service-ports"
-alias dcre="docker-compose run --rm --entrypoint"
-alias dcu="docker-compose up"
-alias dcud="docker-compose up -d"
-alias dcd="docker-compose down -t 0 --remove-orphans"
-alias dce="docker-compose exec"
+alias dc="docker compose"
+alias dcr="docker compose run --rm"
+alias dcrs="docker compose run --rm --service-ports"
+alias dcre="docker compose run --rm --entrypoint"
+alias dcu="docker compose up"
+alias dcud="docker compose up -d"
+alias dcd="docker compose down -t 0 --remove-orphans"
+alias dce="docker compose exec"
 alias de="docker exec -it"
 
 ### TOOLS ###
@@ -79,7 +80,6 @@ export EDITOR='vim'
 # open chrome from wsl to windows
 # export BROWSER='/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'
 # use Xserver
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 export PGPASSWORD=admin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
@@ -104,3 +104,5 @@ export OVERCOMMIT_DISABLE=1
 
 PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
 precmd() { eval "$PROMPT_COMMAND" }
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
