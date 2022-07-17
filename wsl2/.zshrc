@@ -106,3 +106,10 @@ PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(
 precmd() { eval "$PROMPT_COMMAND" }
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# bun completions
+[ -s "/home/johnnormancapule/.bun/_bun" ] && source "/home/johnnormancapule/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/home/johnnormancapule/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
