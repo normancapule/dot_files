@@ -113,3 +113,4 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Bun
 export BUN_INSTALL="/home/johnnormancapule/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0

@@ -1,5 +1,6 @@
 {
   "search.useIgnoreFiles": true,
+  "search.followSymlinks": false,
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
@@ -692,9 +693,8 @@
   },
   "vim.easymotion": true,
   "remote.extensionKind": {
-    "ms-azuretools.vscode-docker": "workspace"
+    "ms-azuretools.vscode-docker": "workspace",
   },
-  "typescript.tsserver.log": "off",
   "search.searchOnType": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.fontFamily": "'FiraCode Nerd Font'",
@@ -721,7 +721,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -758,7 +758,6 @@
   "ruby.useLanguageServer": true,
   "go.lintTool": "golangci-lint",
   "go.lintFlags": ["--fast"],
-  "typescript.tsdk": "node_modules/typescript/lib",
   "vim.foldfix": true,
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
@@ -788,12 +787,6 @@
   },
   "editor.inlineSuggest.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": true,
-    "plaintext": true,
-    "markdown": false
-  },
   "redhat.telemetry.enabled": true,
   "whichkey.bindingOverrides": [
     {
@@ -836,10 +829,12 @@
       ]
     }
   ],
-  "extensions.autoUpdate": false,
   "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "projectManager.sortList": "Recent",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
