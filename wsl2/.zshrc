@@ -11,6 +11,7 @@ plugins=(
   docker
   docker-compose
   1password
+  pyenv
 )
 source $ZSH/oh-my-zsh.sh
 HISTFILE="${HOME}/.zsh_history"
@@ -26,6 +27,7 @@ alias ngrok="~/ngrok"
 alias gt="git-town"
 alias update_tools="
   sudo apt-get update -y;
+  sudo apt dist-upgrade -y;
   sudo apt-get upgrade -y;
   sudo apt autoremove;
   brew tap --repair;
@@ -114,3 +116,17 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export BUN_INSTALL="/home/johnnormancapule/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+
+# pnpm
+export PNPM_HOME="/home/johnnormancapule/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/opt/openssl@3/bin:$PATH"
+export LDFLAGS="-L/home/linuxbrew/.linuxbrew/opt/openssl@3/lib"
+export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/openssl@3/include"
+export PKG_CONFIG_PATH="/home/linuxbrew/.linuxbrew/opt/openssl@3/lib/pkgconfig"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
