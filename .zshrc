@@ -5,7 +5,6 @@ ZSH_THEME="wezm"
 plugins=(
   git
   macos
-  emacs
 )
 source $ZSH/oh-my-zsh.sh
 HISTFILE="${HOME}/.zsh_history"
@@ -23,7 +22,6 @@ alias update_tools='brew unlink vim;
                     asdf plugin-update --all;
                     asdf update;
                     nvim +PlugUpdate +qall;
-                    (cd $HOME/.emacs.d && git pull);
                     omz update;
                    '
 alias update_repos='(cd $HOME/Dropbox/Work && ./update-all.sh);'
@@ -34,7 +32,6 @@ alias vi="'vim'"
 alias vim="nvim"
 alias py="python"
 alias ec="open -a /Applications/Emacs.app"
-alias ect="emacsclient -t -c -a ''"
 alias reset_ssh='eval `ssh-agent -s`:
                  ssh-add -D;
                  ssh-agent;
