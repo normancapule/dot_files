@@ -83,11 +83,5 @@ export LC_ALL=en_US.UTF-8
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 . $(brew --prefix asdf)/libexec/asdf.sh
-. /usr/local/etc/profile.d/z.sh
-
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-source $HOME/.zsh_scripts/fnm
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(fnm env --use-on-cd)"
+. $HOMEBREW_PREFIX/etc/profile.d/z.sh
