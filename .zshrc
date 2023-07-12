@@ -69,10 +69,9 @@ alias gsetb="git push --set-upstream origin \$(git rev-parse --abbrev-ref HEAD)"
 ### RUBY ###
 alias be="bundle exec"
 
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH="$HOME/.asdf/shims:$PATH"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export EDITOR="nvim"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 export PGPASSWORD=admin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
