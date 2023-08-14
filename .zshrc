@@ -12,7 +12,6 @@ setopt SHARE_HISTORY
 
 ### ALIASES ###
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
-alias ngrok="$HOME/Downloads/ngrok"
 alias rmt="rmtrash"
 alias update_tools='brew unlink vim;
                     brew update;
@@ -80,6 +79,9 @@ export PATH=$HOME/bin:$PATH
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
 
 . $(brew --prefix asdf)/libexec/asdf.sh
 eval "$(fnm env --use-on-cd)"
