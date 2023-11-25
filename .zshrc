@@ -23,7 +23,7 @@ alias update_tools='brew unlink vim;
                     nvim +PlugUpdate +qall;
                     omz update;
                    '
-alias update_repos='(cd $HOME/Dropbox/Work && ./update-all.sh);'
+alias update_repos='(bash ~/Desktop/update-all.sh);'
 
 ### COMMANDS ###
 alias mps="iex -S mix phx.server"
@@ -40,15 +40,15 @@ alias k="kubectl"
 
 ### DOCKER ###
 alias de="docker exec -it"
-alias dc="docker-compose"
-alias dcr="docker-compose run --rm"
-alias dce="docker-compose exec"
-alias dcre="docker-compose run --rm --entrypoint"
-alias dcu="docker-compose up"
-alias dcud="docker-compose up -d"
-alias dcd="docker-compose down"
+alias dc="docker compose"
+alias dcr="docker compose run --rm"
+alias dce="docker compose exec"
+alias dcre="docker compose run --rm --entrypoint"
+alias dcu="docker compose up"
+alias dcud="docker compose up -d"
+alias dcd="docker compose down --remove-orphans"
 # [D]ocker [r]un as a [s]erver
-alias drs="docker-compose run --rm --service-ports web"
+alias drs="docker compose run --rm --service-ports web"
 
 ### GIT ###
 alias gaa="git add --all"
