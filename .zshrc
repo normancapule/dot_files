@@ -85,4 +85,4 @@ fi
 
 . $(brew --prefix asdf)/libexec/asdf.sh
 eval "$(fnm env --use-on-cd)"
-. $HOMEBREW_PREFIX/etc/profile.d/z.sh
+. /usr/local/etc/profile.d/z.sh
