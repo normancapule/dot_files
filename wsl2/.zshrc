@@ -5,7 +5,6 @@ ZSH_THEME="wezm"
 plugins=(
   git
   ubuntu
-  emacs
   asdf
   zsh-z
   docker
@@ -37,7 +36,6 @@ alias update_tools="
   asdf plugin-update --all;
   asdf update;
   vim +PlugUpdate +qall;
-  (cd $HOME/.emacs.d && git pull);
   omz update;
   sudo apt-get clean;
 "
@@ -55,10 +53,6 @@ alias de="docker exec -it"
 
 ### TOOLS ###
 alias k="kubectl"
-
-### COMMANDS ###
-alias ec="emacs27"
-alias ect="emacsclient -c -a '' -t"
 
 ### GIT ###
 alias gaa="git add --all"
