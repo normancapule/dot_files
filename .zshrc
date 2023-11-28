@@ -5,6 +5,7 @@ ZSH_THEME="wezm"
 plugins=(
   git
   macos
+  z
 )
 source $ZSH/oh-my-zsh.sh
 HISTFILE="${HOME}/.zsh_history"
@@ -85,4 +86,3 @@ fi
 
 . $(brew --prefix asdf)/libexec/asdf.sh
 eval "$(fnm env --use-on-cd)"
-. /usr/local/etc/profile.d/z.sh
