@@ -1,5 +1,6 @@
 ruby 3.2.2
 elixir 1.13.1
 erlang 24.2
-python 3.10.1
+python 3.12.3
 golang 1.17
+java zulu-jre-17.48.15
