@@ -693,15 +693,14 @@
   },
   "vim.easymotion": true,
   "remote.extensionKind": {
-    "ms-azuretools.vscode-docker": "workspace",
+    "ms-azuretools.vscode-docker": "workspace"
   },
   "search.searchOnType": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.fontFamily": "'FiraCode Nerd Font'",
-  "editor.wordWrap": "off",
+  "editor.wordWrap": "on",
   "workbench.iconTheme": "vscode-icons",
   "editor.matchBrackets": "always",
-  "workbench.activityBar.visible": true,
   "advancedNewFile.exclude": {
     "node_modules": true
   },
@@ -709,55 +708,7 @@
   "less.validate": false,
   "scss.validate": false,
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.settings.editor": "json",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
-  "[ruby]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": "rebornix.ruby"
-  },
-  "ruby.lint": {
-    "rubocop": {
-      "useBundler": true
-    }
-  },
-  "ruby.format": "rubocop",
-  "ruby.useBundler": true,
-  "ruby.useLanguageServer": true,
-  "go.lintTool": "golangci-lint",
-  "go.lintFlags": ["--fast"],
   "vim.foldfix": true,
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
@@ -829,22 +780,84 @@
       ]
     }
   ],
-  "[dockercompose]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "projectManager.sortList": "Recent",
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "[python]": {
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.rulers": [120],
+    "editor.semanticHighlighting.enabled": true,
+    "editor.formatOnSave": true,
     "editor.formatOnType": true
   },
-  "window.zoomLevel": 1,
-  "workbench.editor.untitled.hint": "hidden",
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": true,
-    "plaintext": false,
-    "markdown": false
+  "[javascript]": {
+    "editor.formatOnSave": true,
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    }
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+  "editor.formatOnSaveMode": "file",
+  "vs-code-prettier-eslint.prettierLast": true,
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "projectManager.sortList": "Recent",
+  "githubPullRequests.pullBranch": "never",
+  "remote.SSH.remotePlatform": {
+    "sandbox": "linux",
+    "172.31.2.175": "linux"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.editor.empty.hint": "hidden",
+  "files.exclude": {
+    "**/.git": false
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "window.zoomLevel": 1,
+  "githubPullRequests.terminalLinksHandler": "github",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "workbench.sideBar.location": "right",
+  "explorer.autoReveal": "focusNoScroll",
+  "remote.autoForwardPortsSource": "hybrid",
+  "security.promptForLocalFileProtocolHandling": false,
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "window.confirmSaveUntitledWorkspace": false,
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "terminal.integrated.env.osx": {},
+  "console-ninja.featureSet": "Community",
+  "editor.multiCursorLimit": 100000
 }
