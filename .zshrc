@@ -7,6 +7,8 @@ plugins=(
   macos
   z
 )
+# homebrew completions
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 source $ZSH/oh-my-zsh.sh
 HISTFILE="${HOME}/.zsh_history"
 setopt SHARE_HISTORY
@@ -90,3 +92,5 @@ eval "$(fnm env --use-on-cd)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+PATH=~/.console-ninja/.bin:$PATH
