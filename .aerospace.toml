@@ -49,6 +49,7 @@ key-mapping.preset = 'qwerty'
 1="main"
 2="main"
 3="main"
+10="secondary"
 
 [gaps]
 inner.horizontal = 4
