@@ -12,3 +12,7 @@ tags
 .expo
 .nvmrc
 .node-version
+.ssh
+*.log
+.clinic
+.git-branches.toml

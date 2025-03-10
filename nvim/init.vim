@@ -23,7 +23,7 @@ call plug#end()
   set shiftwidth=2
   set tabstop=2
   set nopaste
-  set clipboard=unnamed
+  set clipboard=unnamedplus
   set ttyfast
   set number
   " Enable syntax highlighting

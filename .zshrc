@@ -29,11 +29,9 @@ alias update_tools='brew unlink vim;
 alias update_repos='(bash ~/Desktop/update-all.sh);'
 
 ### COMMANDS ###
-alias mps="iex -S mix phx.server"
 alias vi="'vim'"
 alias vim="nvim"
 alias py="python"
-alias ec="open -a /Applications/Emacs.app"
 alias reset_ssh='eval `ssh-agent -s`:
                  ssh-add -D;
                  ssh-agent;
@@ -55,6 +53,7 @@ alias drs="docker compose run --rm --service-ports web"
 
 ### GIT ###
 alias gaa="git add --all"
+alias gpf="git push --force-with-lease"
 alias ga="git add"
 alias gs="git status"
 alias gstash="git stash"
@@ -86,11 +85,18 @@ if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
 
-. $(brew --prefix asdf)/libexec/asdf.sh
 eval "$(fnm env --use-on-cd)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-PATH=~/.console-ninja/.bin:$PATH
+
+
+# pnpm
+export PNPM_HOME="/Users/johnnormancapule/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

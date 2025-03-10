@@ -790,11 +790,13 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[ruby]": {
-    "editor.defaultFormatter": "Shopify.ruby-lsp",
-    "editor.rulers": [120],
+    "editor.rulers": [
+      120
+    ],
     "editor.semanticHighlighting.enabled": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true
+    "editor.formatOnSave": false,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "rubocop.vscode-rubocop"
   },
   "[javascript]": {
     "editor.formatOnSave": true,
@@ -802,9 +804,6 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "always"
-    }
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
@@ -841,7 +840,6 @@
   "window.zoomLevel": 1,
   "githubPullRequests.terminalLinksHandler": "github",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "workbench.sideBar.location": "right",
   "explorer.autoReveal": "focusNoScroll",
   "remote.autoForwardPortsSource": "hybrid",
   "security.promptForLocalFileProtocolHandling": false,
@@ -859,5 +857,13 @@
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "terminal.integrated.env.osx": {},
   "console-ninja.featureSet": "Community",
-  "editor.multiCursorLimit": 100000
+  "editor.multiCursorLimit": 100000,
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.env.linux": {},
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "git.ignoreLegacyWarning": true,
+  "githubPullRequests.pushBranch": "always",
+  "workbench.sideBar.location": "right"
 }

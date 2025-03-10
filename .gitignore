@@ -6,3 +6,4 @@ nvim/undo/*
 nvim/.netrwhist
 .aws
 ecs-cli.asc
+iterm_sessions
