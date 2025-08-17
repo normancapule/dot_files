@@ -16,3 +16,4 @@ tags
 *.log
 .clinic
 .git-branches.toml
+.git-town.toml
