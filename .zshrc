@@ -10,10 +10,26 @@ plugins=(
 # homebrew completions
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 source $ZSH/oh-my-zsh.sh
-HISTFILE="${HOME}/.zsh_history"
-setopt SHARE_HISTORY
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=999999999
+SAVEHIST=999999999
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
+setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 ### ALIASES ###
+alias pr='pnpm run'
+alias pi='pnpm i'
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 alias rmt="rmtrash"
 alias update_tools='brew unlink vim;
@@ -40,16 +56,15 @@ alias reset_ssh='eval `ssh-agent -s`:
 alias k="kubectl"
 
 ### DOCKER ###
-alias de="docker exec -it"
-alias dc="docker compose"
-alias dcr="docker compose run --rm"
-alias dce="docker compose exec"
-alias dcre="docker compose run --rm --entrypoint"
-alias dcu="docker compose up"
-alias dcud="docker compose up -d"
-alias dcd="docker compose down --remove-orphans"
+alias pc="podman compose"
+alias pcr="podman compose run --rm"
+alias pce="podman compose exec"
+alias pcre="podman compose run --rm --entrypoint"
+alias pcu="podman compose up"
+alias pcud="podman compose up -d"
+alias pcd="podman compose down --remove-orphans"
 # [D]ocker [r]un as a [s]erver
-alias drs="docker compose run --rm --service-ports web"
+alias prs="podman compose run --rm --service-ports web"
 
 ### GIT ###
 alias gaa="git add --all"
@@ -91,8 +106,6 @@ eval "$(fnm env --use-on-cd)"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-
-
 # pnpm
 export PNPM_HOME="/Users/johnnormancapule/Library/pnpm"
 case ":$PATH:" in
@@ -100,3 +113,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+export GODEBUG=netdns=go
