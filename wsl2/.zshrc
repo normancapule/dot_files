@@ -109,7 +109,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Bun
 export BUN_INSTALL="/home/johnnormancapule/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+export DISPLAY=:0
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/opt/openssl@3/bin:$PATH"
@@ -127,3 +127,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+
